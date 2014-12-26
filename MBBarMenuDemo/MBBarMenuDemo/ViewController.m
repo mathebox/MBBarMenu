@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic) NSInteger firstItemIsFavorite;
+
 @end
 
 @implementation ViewController
@@ -17,11 +19,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.firstItemIsFavorite = FALSE;
 
-    MBBarMenuItem *item1 = [[MBBarMenuItem alloc] initWithTitle:@"Foo"
+    MBBarMenuItem *item1 = [[MBBarMenuItem alloc] initWithTitle:@"Favorite"
                                                          target:self
-                                                         action:@selector(print)];
+                                                         action:@selector(toggleFirstItem)];
     item1.image = [UIImage imageNamed:@"starOutline"];
+    item1.imageActivated = [UIImage imageNamed:@"star"];
+    item1.titleActivated = @"Unfavorite";
+    item1.isActivated = ^BOOL() {
+        return self.firstItemIsFavorite;
+    };
     [self addBarMenuItem:item1];
 
     MBBarMenuItem *item2 = [[MBBarMenuItem alloc] initWithTitle:@"Bar"
@@ -33,6 +41,12 @@
                                                          target:self
                                                          action:@selector(print)];
     [self addBarMenuItem:item3];
+}
+
+- (void)toggleFirstItem
+{
+    self.firstItemIsFavorite = !self.firstItemIsFavorite;
+    [self updateUI];
 }
 
 - (void)print

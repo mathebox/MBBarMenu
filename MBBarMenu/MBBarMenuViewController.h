@@ -41,4 +41,6 @@
 - (void)addBarMenuItem:(MBBarMenuItem *)item;
 - (void)removeBarMenuItem:(MBBarMenuItem *)item;
 
+- (void)updateUI;
+
 @end

@@ -35,7 +35,11 @@
 @property (nonatomic, strong) id target;
 @property (nonatomic) SEL action;
 
+@property (nonatomic, strong) NSString *titleActivated;
+@property (copy) BOOL (^isActivated)(void);
+
 @property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UIImage *imageActivated;
 
 - (instancetype)initWithTitle:(NSString *)title
                        target:(id)target

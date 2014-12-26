@@ -28,8 +28,8 @@ MBBarMenu simplifies the arrangement of multiple UIBarButtonItems in an iOS UINa
 {
     [super viewDidLoad];
 
-    MBBarMenuItem *item1 = [[MBBarMenuItem alloc] initWithTitle:@"Foo" target:self action:@selector(bar)];
-    [self addBarMenuItem:item3];
+    MBBarMenuItem *item = [[MBBarMenuItem alloc] initWithTitle:@"Foo" target:self action:@selector(bar)];
+    [self addBarMenuItem:item];
 }
 ```
 
@@ -42,7 +42,15 @@ MBBarMenu simplifies the arrangement of multiple UIBarButtonItems in an iOS UINa
 - **title**: the text of the item shown in the navigation bar or alert controller (required)
 - **action**: the action to be triggered after selecting the item (required)
 - **target**: the receiver of the action (required)
-- **image**: the image replacing the text in the navigation bar; also show in the alert controller
+- **image**: the image replacing the text in the navigation bar; also shown in the alert controller
+- **isActivated**: the handler to determine the state of an item { ON | OFF }
+- **titleActivated**: the text of the item in activated state
+- **imageActivated**: the image for the item in activated state
+
+# Todo
+- Consider iPhone landscape mode
+- Does it also work on dark navigation bars?
+- Improve state updates of single items (currently all items will be recreated)
 
 # License
 	The MIT License (MIT)

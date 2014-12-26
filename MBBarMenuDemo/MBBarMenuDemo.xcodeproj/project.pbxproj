@@ -19,6 +19,12 @@
 		50B6E4271A4DEEF8001791B3 /* more@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E4241A4DEEF8001791B3 /* more@1x.png */; };
 		50B6E4281A4DEEF8001791B3 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E4251A4DEEF8001791B3 /* more@2x.png */; };
 		50B6E4291A4DEEF8001791B3 /* more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E4261A4DEEF8001791B3 /* more@3x.png */; };
+		50B6E4301A4DF81C001791B3 /* barButtonBackground@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E42A1A4DF81C001791B3 /* barButtonBackground@1x.png */; };
+		50B6E4311A4DF81C001791B3 /* barButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E42B1A4DF81C001791B3 /* barButtonBackground@2x.png */; };
+		50B6E4321A4DF81C001791B3 /* barButtonBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E42C1A4DF81C001791B3 /* barButtonBackground@3x.png */; };
+		50B6E4331A4DF81C001791B3 /* barButtonBackgroundClear@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E42D1A4DF81C001791B3 /* barButtonBackgroundClear@1x.png */; };
+		50B6E4341A4DF81C001791B3 /* barButtonBackgroundClear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E42E1A4DF81C001791B3 /* barButtonBackgroundClear@2x.png */; };
+		50B6E4351A4DF81C001791B3 /* barButtonBackgroundClear@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E42F1A4DF81C001791B3 /* barButtonBackgroundClear@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,12 @@
 		50B6E4241A4DEEF8001791B3 /* more@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "more@1x.png"; path = "../MBBarMenu/more@1x.png"; sourceTree = "<group>"; };
 		50B6E4251A4DEEF8001791B3 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "more@2x.png"; path = "../MBBarMenu/more@2x.png"; sourceTree = "<group>"; };
 		50B6E4261A4DEEF8001791B3 /* more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "more@3x.png"; path = "../MBBarMenu/more@3x.png"; sourceTree = "<group>"; };
+		50B6E42A1A4DF81C001791B3 /* barButtonBackground@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barButtonBackground@1x.png"; path = "../MBBarMenu/barButtonBackground@1x.png"; sourceTree = "<group>"; };
+		50B6E42B1A4DF81C001791B3 /* barButtonBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barButtonBackground@2x.png"; path = "../MBBarMenu/barButtonBackground@2x.png"; sourceTree = "<group>"; };
+		50B6E42C1A4DF81C001791B3 /* barButtonBackground@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barButtonBackground@3x.png"; path = "../MBBarMenu/barButtonBackground@3x.png"; sourceTree = "<group>"; };
+		50B6E42D1A4DF81C001791B3 /* barButtonBackgroundClear@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barButtonBackgroundClear@1x.png"; path = "../MBBarMenu/barButtonBackgroundClear@1x.png"; sourceTree = "<group>"; };
+		50B6E42E1A4DF81C001791B3 /* barButtonBackgroundClear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barButtonBackgroundClear@2x.png"; path = "../MBBarMenu/barButtonBackgroundClear@2x.png"; sourceTree = "<group>"; };
+		50B6E42F1A4DF81C001791B3 /* barButtonBackgroundClear@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barButtonBackgroundClear@3x.png"; path = "../MBBarMenu/barButtonBackgroundClear@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +162,12 @@
 				50B6E4241A4DEEF8001791B3 /* more@1x.png */,
 				50B6E4251A4DEEF8001791B3 /* more@2x.png */,
 				50B6E4261A4DEEF8001791B3 /* more@3x.png */,
+				50B6E42A1A4DF81C001791B3 /* barButtonBackground@1x.png */,
+				50B6E42B1A4DF81C001791B3 /* barButtonBackground@2x.png */,
+				50B6E42C1A4DF81C001791B3 /* barButtonBackground@3x.png */,
+				50B6E42D1A4DF81C001791B3 /* barButtonBackgroundClear@1x.png */,
+				50B6E42E1A4DF81C001791B3 /* barButtonBackgroundClear@2x.png */,
+				50B6E42F1A4DF81C001791B3 /* barButtonBackgroundClear@3x.png */,
 			);
 			name = assets;
 			sourceTree = "<group>";
@@ -234,11 +252,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B6E4311A4DF81C001791B3 /* barButtonBackground@2x.png in Resources */,
+				50B6E4341A4DF81C001791B3 /* barButtonBackgroundClear@2x.png in Resources */,
 				50B6E4291A4DEEF8001791B3 /* more@3x.png in Resources */,
 				50B6E3F61A4CBDEF001791B3 /* Main.storyboard in Resources */,
+				50B6E4301A4DF81C001791B3 /* barButtonBackground@1x.png in Resources */,
 				50B6E3FB1A4CBDEF001791B3 /* LaunchScreen.xib in Resources */,
 				50B6E4271A4DEEF8001791B3 /* more@1x.png in Resources */,
 				50B6E3F81A4CBDEF001791B3 /* Images.xcassets in Resources */,
+				50B6E4331A4DF81C001791B3 /* barButtonBackgroundClear@1x.png in Resources */,
+				50B6E4351A4DF81C001791B3 /* barButtonBackgroundClear@3x.png in Resources */,
+				50B6E4321A4DF81C001791B3 /* barButtonBackground@3x.png in Resources */,
 				50B6E4281A4DEEF8001791B3 /* more@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
