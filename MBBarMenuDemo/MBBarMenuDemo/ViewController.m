@@ -18,11 +18,20 @@
 {
     [super viewDidLoad];
 
-    MBBarMenuItem *item1 = [[MBBarMenuItem alloc] initWithTitle:@"Foo" target:self action:@selector(print)];
-    MBBarMenuItem *item2 = [[MBBarMenuItem alloc] initWithTitle:@"Bar" target:self action:@selector(print)];
-    MBBarMenuItem *item3 = [[MBBarMenuItem alloc] initWithTitle:@"Baz" target:self action:@selector(print)];
+    MBBarMenuItem *item1 = [[MBBarMenuItem alloc] initWithTitle:@"Foo"
+                                                         target:self
+                                                         action:@selector(print)];
+    item1.image = [UIImage imageNamed:@"starOutline"];
     [self addBarMenuItem:item1];
+
+    MBBarMenuItem *item2 = [[MBBarMenuItem alloc] initWithTitle:@"Bar"
+                                                         target:self
+                                                         action:@selector(print)];
     [self addBarMenuItem:item2];
+
+    MBBarMenuItem *item3 = [[MBBarMenuItem alloc] initWithTitle:@"Baz"
+                                                         target:self
+                                                         action:@selector(print)];
     [self addBarMenuItem:item3];
 }
 

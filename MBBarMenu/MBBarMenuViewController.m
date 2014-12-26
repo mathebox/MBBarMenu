@@ -59,6 +59,23 @@
     return self.items.count <= self.maximumItemCount ? self.items.count : self.maximumItemCount - 1;
 }
 
+- (UIBarButtonItem *)barButtomItemForMenuItem:(MBBarMenuItem *)bmItem
+{
+    UIBarButtonItem *item;
+    if (bmItem.image) {
+        item = [[UIBarButtonItem alloc] initWithImage:bmItem.image
+                                                style:UIBarButtonItemStylePlain
+                                               target:bmItem.target
+                                               action:bmItem.action];
+    } else {
+        item = [[UIBarButtonItem alloc] initWithTitle:bmItem.title
+                                                style:UIBarButtonItemStylePlain
+                                               target:bmItem.target
+                                               action:bmItem.action];
+    }
+    return item;
+}
+
 - (void)addBarMenuItem:(MBBarMenuItem *)item
 {
     [self.items addObject:item];
@@ -77,11 +94,7 @@
 
     NSMutableArray *barButtons = [NSMutableArray new];
     [[self.items subarrayWithRange:NSMakeRange(0, barButtonCount)] enumerateObjectsUsingBlock:^(MBBarMenuItem *bmItem, NSUInteger idx, BOOL *stop) {
-        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:bmItem.title
-                                                                 style:UIBarButtonItemStylePlain
-                                                                target:bmItem.target
-                                                                action:bmItem.action];
-        [barButtons addObject:item];
+        [barButtons addObject:[self barButtomItemForMenuItem:bmItem]];
     }];
 
     NSInteger alertButtonCount = self.items.count - barButtonCount;
@@ -108,6 +121,9 @@
                                                        handler:^(UIAlertAction *action) {
             [bmItem.target performSelector:bmItem.action withObject:nil afterDelay:0.0];
         }];
+        if (bmItem.image) {
+            [action setValue:bmItem.image forKey:@"image"];
+        }
         [alert addAction:action];
     }];
 

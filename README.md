@@ -42,6 +42,7 @@ MBBarMenu simplifies the arrangement of multiple UIBarButtonItems in an iOS UINa
 - **title**: the text of the item shown in the navigation bar or alert controller (required)
 - **action**: the action to be triggered after selecting the item (required)
 - **target**: the receiver of the action (required)
+- **image**: the image replacing the text in the navigation bar; also show in the alert controller
 
 # License
 	The MIT License (MIT)

@@ -29,12 +29,13 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface MBBarMenuItem : NSObject
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) id target;
 @property (nonatomic) SEL action;
+
+@property (nonatomic, strong) UIImage *image;
 
 - (instancetype)initWithTitle:(NSString *)title
                        target:(id)target
