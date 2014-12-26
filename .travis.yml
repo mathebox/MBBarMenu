@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: MBBarMenuDemo/MBBarMenuDemo.xcodeproj # path to your xcodeproj folder
+xcode_scheme: MBBarMenuDemo
+xcode_sdk: iphonesimulator8.1
