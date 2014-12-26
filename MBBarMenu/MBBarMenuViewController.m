@@ -99,9 +99,10 @@
 
     NSInteger alertButtonCount = self.items.count - barButtonCount;
     if (alertButtonCount > 1) {
-        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
-                                                                              target:self
-                                                                              action:@selector(pressedMoreButton)];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"more"]
+                                                                 style:UIBarButtonItemStylePlain
+                                                                target:self
+                                                                action:@selector(pressedMoreButton)];
         [barButtons addObject:item];
     }
 

@@ -16,6 +16,9 @@
 		50B6E4071A4CBDF0001791B3 /* MBBarMenuDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B6E4061A4CBDF0001791B3 /* MBBarMenuDemoTests.m */; };
 		50B6E4121A4CBF24001791B3 /* MBBarMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B6E4111A4CBF24001791B3 /* MBBarMenuViewController.m */; };
 		50B6E4151A4CBF50001791B3 /* MBBarMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B6E4141A4CBF50001791B3 /* MBBarMenuItem.m */; };
+		50B6E4271A4DEEF8001791B3 /* more@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E4241A4DEEF8001791B3 /* more@1x.png */; };
+		50B6E4281A4DEEF8001791B3 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E4251A4DEEF8001791B3 /* more@2x.png */; };
+		50B6E4291A4DEEF8001791B3 /* more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B6E4261A4DEEF8001791B3 /* more@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		50B6E4111A4CBF24001791B3 /* MBBarMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBBarMenuViewController.m; path = ../MBBarMenu/MBBarMenuViewController.m; sourceTree = "<group>"; };
 		50B6E4131A4CBF50001791B3 /* MBBarMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBBarMenuItem.h; path = ../MBBarMenu/MBBarMenuItem.h; sourceTree = "<group>"; };
 		50B6E4141A4CBF50001791B3 /* MBBarMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBBarMenuItem.m; path = ../MBBarMenu/MBBarMenuItem.m; sourceTree = "<group>"; };
+		50B6E4241A4DEEF8001791B3 /* more@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "more@1x.png"; path = "../MBBarMenu/more@1x.png"; sourceTree = "<group>"; };
+		50B6E4251A4DEEF8001791B3 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "more@2x.png"; path = "../MBBarMenu/more@2x.png"; sourceTree = "<group>"; };
+		50B6E4261A4DEEF8001791B3 /* more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "more@3x.png"; path = "../MBBarMenu/more@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +139,19 @@
 				50B6E4111A4CBF24001791B3 /* MBBarMenuViewController.m */,
 				50B6E4131A4CBF50001791B3 /* MBBarMenuItem.h */,
 				50B6E4141A4CBF50001791B3 /* MBBarMenuItem.m */,
+				50B6E41D1A4DEC03001791B3 /* assets */,
 			);
 			name = MBBarMenu;
+			sourceTree = "<group>";
+		};
+		50B6E41D1A4DEC03001791B3 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				50B6E4241A4DEEF8001791B3 /* more@1x.png */,
+				50B6E4251A4DEEF8001791B3 /* more@2x.png */,
+				50B6E4261A4DEEF8001791B3 /* more@3x.png */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +234,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B6E4291A4DEEF8001791B3 /* more@3x.png in Resources */,
 				50B6E3F61A4CBDEF001791B3 /* Main.storyboard in Resources */,
 				50B6E3FB1A4CBDEF001791B3 /* LaunchScreen.xib in Resources */,
+				50B6E4271A4DEEF8001791B3 /* more@1x.png in Resources */,
 				50B6E3F81A4CBDEF001791B3 /* Images.xcassets in Resources */,
+				50B6E4281A4DEEF8001791B3 /* more@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
