@@ -1,5 +1,5 @@
 # MBBarMenu
-MBBarMenu simplifies the arrangement of multiple UIBarButtonItems in an iOS UINavigationBar. Up to a given count the items will be shown normally. If the number of item exceed this threshold, all remaining items will be shown in a UIAlertController.
+MBBarMenu simplifies the arrangement of multiple UIBarButtonItems in an iOS UINavigationBar. Up to a given count the items will be shown normally. If the number of items exceeds this threshold, all remaining items will be shown in a UIAlertController.
 
 [![Build Status](https://travis-ci.org/mathebox/MBBarMenu.svg?branch=master)](https://travis-ci.org/mathebox/MBBarMenu)
 
@@ -15,7 +15,9 @@ MBBarMenu simplifies the arrangement of multiple UIBarButtonItems in an iOS UINa
 - Copy the MBBarMenu directory to your project
 
 ### via CocoaPods
-- coming soon…
+- Add `pod ‘MBBarMenu’` to your [Podfile](http://cocoapods.org/)
+- Run `pod install`
+- Run `open App.xcworkspace`
 
 # Getting started
 ### Setup view controller
