@@ -29,6 +29,11 @@
 
 #import "MBBarMenuViewController.h"
 
+#define ACTION_IMAGE_PADDING            4
+#define BACKGROUND_CLEAR_IMAGE_NAME     @"barButtonBackgroundClear"
+#define BACKGROUND_FILLED_IMAGE_NAME    @"barButtonBackground"
+#define MORE_IMAGE                      [UIImage imageNamed:@"more"]
+
 @interface MBBarMenuViewController ()
 
 @property (nonatomic, strong) NSMutableArray *items;
@@ -83,7 +88,8 @@
 
 - (UIImage *)backgroundImageForMenuItem:(MBBarMenuItem *)bmItem
 {
-    NSString *backgroundName = (bmItem.isActivated && bmItem.isActivated()) ? @"barButtonBackground" : @"barButtonBackgroundClear";
+    NSString *backgroundName = (bmItem.isActivated && bmItem.isActivated()) ?
+                                BACKGROUND_FILLED_IMAGE_NAME : BACKGROUND_CLEAR_IMAGE_NAME;
     UIImage *background = [UIImage imageNamed:backgroundName];
     background = [background imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     background = [background resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
@@ -96,11 +102,12 @@
         return nil;
     }
 
-    NSInteger padding = 4;
-    CGSize size = CGSizeMake(image2.size.width+2*padding, image2.size.height+2*padding);
+    CGSize size = CGSizeMake(image2.size.width + 2*ACTION_IMAGE_PADDING,
+                             image2.size.height + 2*ACTION_IMAGE_PADDING);
     UIGraphicsBeginImageContext(size);
     [image2 drawInRect:CGRectMake(0, 0, size.width, size.height)];
-    [image1 drawInRect:CGRectMake(padding, padding, image2.size.width, image2.size.height)];
+    [image1 drawInRect:CGRectMake(ACTION_IMAGE_PADDING, ACTION_IMAGE_PADDING,
+                                  image2.size.width, image2.size.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
@@ -158,7 +165,7 @@
 
     NSInteger alertButtonCount = self.items.count - barButtonCount;
     if (alertButtonCount > 1) {
-        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"more"]
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:MORE_IMAGE
                                                                  style:UIBarButtonItemStylePlain
                                                                 target:self
                                                                 action:@selector(pressedMoreButton)];
