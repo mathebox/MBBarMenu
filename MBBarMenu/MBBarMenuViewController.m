@@ -181,7 +181,7 @@
     [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
 
     NSInteger barButtonCount = [self barButtonCount];
-    NSRange range = NSMakeRange(barButtonCount, self.items.count);
+    NSRange range = NSMakeRange(barButtonCount, self.items.count - barButtonCount);
     [[self.items subarrayWithRange:range] enumerateObjectsUsingBlock:^(MBBarMenuItem *bmItem, NSUInteger idx, BOOL *stop) {
         UIAlertAction *action = [UIAlertAction actionWithTitle:[self titleForMenuItem:bmItem]
                                                          style:UIAlertActionStyleDefault
