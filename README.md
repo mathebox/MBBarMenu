@@ -25,6 +25,7 @@ MBBarMenu simplifies the arrangement of multiple UIBarButtonItems in an iOS UINa
 - The view controller must be place inside a ```UINavigationController```
 
 ### Add menu items
+It's recommended to setup the items when the view controller is loaded, e.g.: in `initWithCoder:` or in `viewDidLoad:`. However new item will appear immediately when added to `MBBarMenuViewController`. Example:
 ```objc
 - (void)viewDidLoad
 {
@@ -53,6 +54,8 @@ MBBarMenu simplifies the arrangement of multiple UIBarButtonItems in an iOS UINa
 - Consider iPhone landscape mode
 - Does it also work on dark navigation bars?
 - Improve state updates of single items (currently all items will be recreated)
+- Add method to hide all items
+- Maybe implement as UIViewController Extension
 
 # License
 	The MIT License (MIT)
