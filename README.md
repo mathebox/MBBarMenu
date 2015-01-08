@@ -50,13 +50,6 @@ It's recommended to setup the items when the view controller is loaded, e.g.: in
 - **titleActivated**: the text of the item in activated state
 - **imageActivated**: the image for the item in activated state
 
-# Todo
-- Consider iPhone landscape mode
-- Does it also work on dark navigation bars?
-- Improve state updates of single items (currently all items will be recreated)
-- Add method to hide all items
-- Maybe implement as UIViewController Extension
-
 # License
 	The MIT License (MIT)
 	
