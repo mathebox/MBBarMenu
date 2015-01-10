@@ -33,14 +33,46 @@
 #define DEFAULT_MAX_ITEM_COUNT_PHONE    1
 #define DEFAULT_MAX_ITEM_COUNT_PAD      4
 
+/**
+ `MBBarMenuViewController` is a subclass of `UIViewcontroller`. It handles the arrangement of 
+ `MBBarMenuItem`s.
+
+ @see MBBarMenuItem
+ */
 @interface MBBarMenuViewController : UIViewController
 
+/**
+ The maximum count of items shown in the navigation bar on an iPhone. The default value is 1.
+
+ @warning `maximumItemCountPhone` must be 1 or greater
+ */
 @property (nonatomic) NSInteger maximumItemCountPhone;
+
+/**
+ The maximum count of items shown in the navigation bar on an iPad. The default value is 4.
+
+ @warning `maximumItemCountPhone` must be 1 or greater
+ */
 @property (nonatomic) NSInteger maximumItemCountPad;
 
+/**
+ Adds a `MBBarMenuItem` to the menu.
+
+ @param item The `MBBarMenuItem` to be added
+ */
 - (void)addBarMenuItem:(MBBarMenuItem *)item;
+
+/**
+ Removes a `MBBarMenuItem` from the menu.
+
+ @param item The `MBBarMenuItem` to be removed
+ */
 - (void)removeBarMenuItem:(MBBarMenuItem *)item;
 
+/**
+ Refreshes the appearence of all items shown in the navigation bar. If there were additions or
+ removals of items, the number of items shown in the navigation bar will be adjusted.
+ */
 - (void)updateUI;
 
 @end

@@ -29,18 +29,58 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ `MBBarMenuItem` encapsulates all properties for one item shown in the menu.
+ */
 @interface MBBarMenuItem : NSObject
 
+/**
+ The title of the item. Shown in the navigation bar if no image was set.
+ Always shon in the alert controller.
+
+ @see image
+ */
 @property (nonatomic, strong) NSString *title;
+
+/**
+ The target object of the action.
+ */
 @property (nonatomic, strong) id target;
+
+/**
+ The action to be triggered on the target object.
+ */
 @property (nonatomic) SEL action;
 
-@property (nonatomic, strong) NSString *titleActivated;
+/**
+ The image which optionally replaces the title in the navigation bar.
+ */
+@property (nonatomic, strong) UIImage *image;
+
+/**
+ The callback which determines if the item should be rendered in activated state or not.
+ */
 @property (copy) BOOL (^isActivated)(void);
 
-@property (nonatomic, strong) UIImage *image;
+/**
+ The alternative title shown in activated state.
+ */
+@property (nonatomic, strong) NSString *titleActivated;
+
+/**
+ The alternative image which replaces the image in activated state.
+ */
 @property (nonatomic, strong) UIImage *imageActivated;
 
+/**
+ Creates a new `MBBarMenuIten`.
+
+ @param title The title of the new item
+ @param target The target of the new item
+ @param action The action of the new item
+
+ @return The new `MBBarMenuIten`
+ */
 - (instancetype)initWithTitle:(NSString *)title
                        target:(id)target
                        action:(SEL)action;
