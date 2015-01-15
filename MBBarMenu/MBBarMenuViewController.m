@@ -32,7 +32,6 @@
 #define ACTION_IMAGE_PADDING            4
 #define BACKGROUND_CLEAR_IMAGE_NAME     @"barButtonBackgroundClear"
 #define BACKGROUND_FILLED_IMAGE_NAME    @"barButtonBackground"
-#define MORE_IMAGE                      [UIImage imageNamed:@"more"]
 
 @interface MBBarMenuViewController ()
 
@@ -90,7 +89,7 @@
 {
     NSString *backgroundName = (bmItem.isActivated && bmItem.isActivated()) ?
                                 BACKGROUND_FILLED_IMAGE_NAME : BACKGROUND_CLEAR_IMAGE_NAME;
-    UIImage *background = [UIImage imageNamed:backgroundName];
+    UIImage *background = [self imageFromBundleWithFileName:backgroundName withExtension:@"png"];
     background = [background imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     background = [background resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
     return background;
@@ -165,7 +164,8 @@
 
     NSInteger alertButtonCount = self.items.count - barButtonCount;
     if (alertButtonCount > 1) {
-        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:MORE_IMAGE
+        UIImage *moreImage = [self imageFromBundleWithFileName:@"more" withExtension:@"png"];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:moreImage
                                                                  style:UIBarButtonItemStylePlain
                                                                 target:self
                                                                 action:@selector(pressedMoreButton)];
@@ -195,6 +195,28 @@
 
     alert.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItems.firstObject;
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma - Helper
+
+- (NSString *)scaleFactorString
+{
+    CGFloat scaleFactor = [UIScreen mainScreen].scale;
+    if (scaleFactor == 3.0) {
+        return @"@3x";
+    } else if (scaleFactor == 2.0) {
+        return @"@2x";
+    } else {
+        return @"@1x";
+    }
+}
+
+- (UIImage *)imageFromBundleWithFileName:(NSString *)fileName withExtension:(NSString *)fileExtension
+{
+    NSString *fileNameWithScale = [fileName stringByAppendingString:[self scaleFactorString]];
+    NSBundle *bundle = [NSBundle bundleForClass:[MBBarMenuViewController class]];
+    NSString *imagePath = [bundle pathForResource:fileNameWithScale ofType:fileExtension];
+    return [UIImage imageWithContentsOfFile:imagePath];
 }
 
 @end
