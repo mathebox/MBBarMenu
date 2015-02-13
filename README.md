@@ -40,6 +40,7 @@ It's recommended to setup the items when the view controller is loaded, e.g.: in
 ### MBBarMenuViewController
 - **maximumItemCountPhone**: maximum number of items for the navigation bar on iPhones (default: 1)
 - **maximumItemCountPad**: maximum number of items for the navigation bar on iPads (default: 4)
+- **menuHidden**: incidates whether the menu is shown or not (default: false)
 
 ### MBBarMenuItem
 - **title**: the text of the item shown in the navigation bar or alert controller (required)

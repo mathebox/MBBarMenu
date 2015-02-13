@@ -56,6 +56,11 @@
 @property (nonatomic) NSInteger maximumItemCountPad;
 
 /**
+ Indicates wheter the menu is shown or not. The default value is false.
+ */
+@property (nonatomic) Boolean menuHidden;
+
+/**
  Adds a `MBBarMenuItem` to the menu.
 
  @param item The `MBBarMenuItem` to be added

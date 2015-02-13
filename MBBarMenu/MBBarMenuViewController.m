@@ -48,6 +48,7 @@
     if (self) {
         self.maximumItemCountPhone = DEFAULT_MAX_ITEM_COUNT_PHONE;
         self.maximumItemCountPad = DEFAULT_MAX_ITEM_COUNT_PAD;
+        self.menuHidden = false;
         self.items = [NSMutableArray array];
     }
     return self;
@@ -61,6 +62,12 @@
 - (NSInteger)barButtonCount
 {
     return self.items.count <= self.maximumItemCount ? self.items.count : self.maximumItemCount - 1;
+}
+
+- (void)setMenuHidden:(Boolean)hidden
+{
+    _menuHidden = hidden;
+    [self updateUI];
 }
 
 - (NSString *)titleForMenuItem:(MBBarMenuItem *)bmItem
@@ -158,18 +165,21 @@
     NSInteger barButtonCount = [self barButtonCount];
 
     NSMutableArray *barButtons = [NSMutableArray new];
-    [[self.items subarrayWithRange:NSMakeRange(0, barButtonCount)] enumerateObjectsUsingBlock:^(MBBarMenuItem *bmItem, NSUInteger idx, BOOL *stop) {
-        [barButtons addObject:[self barButtomItemForMenuItem:bmItem]];
-    }];
 
-    NSInteger alertButtonCount = self.items.count - barButtonCount;
-    if (alertButtonCount > 1) {
-        UIImage *moreImage = [self imageFromBundleWithFileName:@"more" withExtension:@"png"];
-        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:moreImage
-                                                                 style:UIBarButtonItemStylePlain
-                                                                target:self
-                                                                action:@selector(pressedMoreButton)];
-        [barButtons addObject:item];
+    if (!self.menuHidden) {
+        [[self.items subarrayWithRange:NSMakeRange(0, barButtonCount)] enumerateObjectsUsingBlock:^(MBBarMenuItem *bmItem, NSUInteger idx, BOOL *stop) {
+            [barButtons addObject:[self barButtomItemForMenuItem:bmItem]];
+        }];
+
+        NSInteger alertButtonCount = self.items.count - barButtonCount;
+        if (alertButtonCount > 1) {
+            UIImage *moreImage = [self imageFromBundleWithFileName:@"more" withExtension:@"png"];
+            UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:moreImage
+                                                                     style:UIBarButtonItemStylePlain
+                                                                    target:self
+                                                                    action:@selector(pressedMoreButton)];
+            [barButtons addObject:item];
+        }
     }
 
     self.navigationItem.rightBarButtonItems = [barButtons.reverseObjectEnumerator allObjects];

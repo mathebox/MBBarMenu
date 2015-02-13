@@ -49,6 +49,10 @@
     [self updateUI];
 }
 
+- (IBAction)toogleMenu:(id)sender {
+    self.menuHidden = !self.menuHidden;
+}
+
 - (void)print
 {
     NSLog(@"Pressed item");
