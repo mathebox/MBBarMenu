@@ -80,4 +80,13 @@
  */
 - (void)updateUI;
 
+/**
+ Returns the index if the item with the given title if visible in the menu. Otherwise it will return NSNotFound.
+
+ @param title The title of the item
+
+ @return the index of the item
+ */
+- (NSUInteger)visibleIndexOfItemWithTitle:(NSString *)title;
+
 @end

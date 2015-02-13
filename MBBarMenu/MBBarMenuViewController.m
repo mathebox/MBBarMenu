@@ -207,6 +207,15 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (NSUInteger)visibleIndexOfItemWithTitle:(NSString *)title
+{
+    NSIndexSet *indeces = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [self barButtonCount])];
+    return [self.items indexOfObjectAtIndexes:indeces options:NSEnumerationConcurrent passingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        MBBarMenuItem *item = (MBBarMenuItem *)obj;
+        return [item.title isEqualToString:title];
+    }];
+}
+
 #pragma - Helper
 
 - (NSString *)scaleFactorString
