@@ -58,7 +58,7 @@
 /**
  Indicates wheter the menu is shown or not. The default value is false.
  */
-@property (nonatomic) Boolean menuHidden;
+@property (nonatomic) BOOL menuHidden;
 
 /**
  Adds a `MBBarMenuItem` to the menu.

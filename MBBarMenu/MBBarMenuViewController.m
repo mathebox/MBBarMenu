@@ -48,7 +48,7 @@
     if (self) {
         self.maximumItemCountPhone = DEFAULT_MAX_ITEM_COUNT_PHONE;
         self.maximumItemCountPad = DEFAULT_MAX_ITEM_COUNT_PAD;
-        self.menuHidden = false;
+        self.menuHidden = NO;
         self.items = [NSMutableArray array];
     }
     return self;
@@ -64,7 +64,7 @@
     return self.items.count <= self.maximumItemCount ? self.items.count : self.maximumItemCount - 1;
 }
 
-- (void)setMenuHidden:(Boolean)hidden
+- (void)setMenuHidden:(BOOL)hidden
 {
     _menuHidden = hidden;
     [self updateUI];
