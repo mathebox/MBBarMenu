@@ -1,7 +1,7 @@
 # MBBarMenu
 MBBarMenu simplifies the arrangement of multiple UIBarButtonItems in an iOS UINavigationBar. Up to a given count the items will be shown normally. If the number of items exceeds this threshold, all remaining items will be shown in a UIAlertController.
 
-[![Build Status](https://img.shields.io/travis/mathebox/MBBarMenu.svg?style=flat)](https://travis-ci.org/mathebox/MBBarMenu) [![Cocoapods](https://img.shields.io/cocoapods/v/MBBarMenu.svg?style=flat)](http://cocoapods.org/?q=mbbarmenu) ![Platform](https://img.shields.io/cocoapods/p/MBBarMenu.svg?style=flat) ![License](https://img.shields.io/cocoapods/l/MBBarMenu.svg?style=flat)
+[![Build Status](https://img.shields.io/travis/mathebox/MBBarMenu.svg?style=flat)](https://travis-ci.org/mathebox/MBBarMenu) [![CocoaPods](https://img.shields.io/cocoapods/v/MBBarMenu.svg?style=flat)](http://cocoapods.org/?q=mbbarmenu) ![Platform](https://img.shields.io/cocoapods/p/MBBarMenu.svg?style=flat) ![License](https://img.shields.io/cocoapods/l/MBBarMenu.svg?style=flat)
 
 ### on iPhone
 ![MBBarMenu Example Phone](https://raw.githubusercontent.com/mathebox/MBBarMenu/master/assets/example_phone.png)
